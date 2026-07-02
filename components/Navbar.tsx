@@ -12,6 +12,7 @@ const links = [
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const sections = links
@@ -21,14 +22,12 @@ export default function Navbar() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Quando a seção ocupar o centro/maior parte da tela visível, ativa ela
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
           }
         });
       },
       {
-        // Ajusta o gatilho para ativar quando a seção estiver bem visível no meio da tela
         rootMargin: "-40% 0px -50% 0px",
       }
     );
@@ -40,16 +39,18 @@ export default function Navbar() {
     };
   }, []);
 
+  // Fecha o menu mobile automaticamente ao clicar em um link
+  const handleLinkClick = () => setMenuOpen(false);
+
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-[#050508]/80 backdrop-blur">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link href="#" className="flex items-center gap-2">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-
-          <span className="font-display text-2xl font-bold tracking-wide">
-          </span>
+          <span className="font-display text-2xl font-bold tracking-wide"></span>
         </Link>
 
+        {/* Links desktop */}
         <div className="hidden items-center gap-8 md:flex">
           {links.map((link) => (
             <a
@@ -65,7 +66,56 @@ export default function Navbar() {
             </a>
           ))}
         </div>
+
+        {/* Botão hambúrguer - só aparece em mobile */}
+        <button
+          type="button"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          className="flex flex-col gap-1.5 p-2 md:hidden"
+          aria-label="Abrir menu"
+          aria-expanded={menuOpen}
+        >
+          <span
+            className={`block h-0.5 w-6 bg-white transition-transform duration-300 ${
+              menuOpen ? "translate-y-2 rotate-45" : ""
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-white transition-opacity duration-300 ${
+              menuOpen ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`block h-0.5 w-6 bg-white transition-transform duration-300 ${
+              menuOpen ? "-translate-y-2 -rotate-45" : ""
+            }`}
+          />
+        </button>
       </nav>
+
+      {/* Menu mobile - dropdown */}
+      <div
+        className={`overflow-hidden transition-all duration-300 md:hidden ${
+          menuOpen ? "max-h-64" : "max-h-0"
+        }`}
+      >
+        <div className="flex flex-col gap-1 border-t border-white/5 px-6 py-4">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={handleLinkClick}
+              className={`py-2 text-sm transition-colors ${
+                activeSection === link.id
+                  ? "text-gradient font-medium"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+      </div>
     </header>
   );
 }

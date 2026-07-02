@@ -136,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* SOBRE */}
-<section id="sobre" className="relative overflow-hidden px-6 py-20">  <BackgroundArcs side="right" className="-right-32 top-0 opacity-25" />
+<section id="sobre" className="relative overflow-hidden px-6 py-20">
   <div className="relative z-10 mx-auto max-w-6xl">
     <div className="mx-auto max-w-xl text-center">
       <h2 className="font-display text-2xl font-semibold sm:text-3xl">
@@ -186,7 +186,6 @@ export default function Home() {
 
       {/* CONTATO */}
 <section id="contato" className="relative overflow-hidden px-6 py-20">
-          <BackgroundArcs side="right" className="-right-24 -bottom-24 opacity-30" />
         <div className="relative z-10 mx-auto max-w-2xl text-center">
           <h2 className="font-display text-2xl font-semibold sm:text-3xl">
             Vamos criar o <span className="text-gradient">site</span> da sua
