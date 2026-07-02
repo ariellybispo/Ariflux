@@ -133,7 +133,6 @@ body::after {
   pointer-events: none;
 }
 
-/* Camada 2: GIF da logo por cima, com blend para sumir o preto */
 body::before {
   content: "";
   position: fixed;
@@ -143,7 +142,11 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
   background-size: min(55vw, 650px);
-  opacity: 0.18;
+  opacity: 0.10;
   mix-blend-mode: screen;
   pointer-events: none;
+}
+
+body {
+  cursor: url("/cursor.cur"), url("/cursor.png") 2 2, auto;
 }

@@ -44,30 +44,8 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/5 bg-[#050508]/80 backdrop-blur">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="#" className="flex items-center gap-2">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <span className="font-display text-2xl font-bold tracking-wide"></span>
-        </Link>
-
-        {/* Links desktop */}
-        <div className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className={`text-sm transition-colors ${
-                activeSection === link.id
-                  ? "text-gradient font-medium"
-                  : "text-gray-300 hover:text-white"
-              }`}
-            >
-              {link.label}
-            </a>
-          ))}
-        </div>
-
-        {/* Botão hambúrguer - só aparece em mobile */}
+      <nav className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-6 py-4">
+        {/* Botão hambúrguer - fica à esquerda, só aparece em mobile */}
         <button
           type="button"
           onClick={() => setMenuOpen((prev) => !prev)}
@@ -91,6 +69,28 @@ export default function Navbar() {
             }`}
           />
         </button>
+
+        <Link href="#" className="flex items-center gap-2 md:mr-auto">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <span className="font-display text-2xl font-bold tracking-wide"></span>
+        </Link>
+
+        {/* Links desktop */}
+        <div className="hidden items-center gap-8 md:flex">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`text-sm transition-colors ${
+                activeSection === link.id
+                  ? "text-gradient font-medium"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </nav>
 
       {/* Menu mobile - dropdown */}
