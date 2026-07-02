@@ -9,6 +9,10 @@ export default function BackgroundArcs({ className = "", side = "right" }: Props
   return (
     <svg
       className={`pointer-events-none absolute ${flip} ${className}`}
+      style={{
+        maskImage: "radial-gradient(circle at 100% 0%, black 15%, transparent 65%)",
+        WebkitMaskImage: "radial-gradient(circle at 100% 0%, black 15%, transparent 65%)",
+      }}
       width="600"
       height="600"
       viewBox="0 0 600 600"

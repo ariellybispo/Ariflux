@@ -60,8 +60,6 @@ export default function Home() {
       {/* HERO */}
       <section className="relative overflow-hidden px-6 pt-20 pb-28 text-center">
         <div className="ambient-glow" />
-        <BackgroundArcs side="right" className="-right-24 -top-24 opacity-70" />
-        <BackgroundArcs side="left" className="-left-24 -bottom-24 opacity-50" />
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="invisible mb-6 inline-block rounded-full border border-purple-500/30 bg-purple-500/10 px-4...">
   Ariflux · Soluções Web
@@ -86,7 +84,6 @@ export default function Home() {
 
       {/* SERVIÇOS */}
 <section id="servicos" className="relative overflow-hidden px-6 py-20">
-          <BackgroundArcs side="left" className="-left-32 -top-16 opacity-25" />
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="mx-auto max-w-xl text-center">
             <h2 className="font-display text-2xl font-semibold sm:text-3xl">
