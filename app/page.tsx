@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import BackgroundArcs from "@/components/BackgroundArcs";
 
 const services = [
   {
@@ -71,7 +70,7 @@ export default function Home() {
               para o <span className="text-[#3b82f6]">digital.</span>
             </span>
           </h1>
-          <span className="mx-auto mt-5 block h-[2px] w-16 bg-gradient-to-r from-purple-500 to-blue-500" />
+          <span className="mx-auto mt-5 block h-0.5 w-16 bg-linear-to-r from-purple-500 to-blue-500" />
           <p className="mx-auto mt-6 max-w-xl text-lg text-gray-400">
             Um Instagram bonito <span className="text-gradient font-medium">não é mais suficiente</span>.
             Criamos sites modernos, rápidos e com identidade própria que

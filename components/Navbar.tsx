@@ -71,7 +71,6 @@ export default function Navbar() {
         </button>
 
         <Link href="#" className="flex items-center gap-2 md:mr-auto">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
           <span className="font-display text-2xl font-bold tracking-wide"></span>
         </Link>
 
