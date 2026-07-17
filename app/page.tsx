@@ -121,7 +121,7 @@ const [project, setProject] = useState("");
 
 const sendWhatsApp = () => {
   const message = `
-Olá!
+Olá! Vim através do site da Ariflux e gostaria de solicitar um orçamento.
 
 Meu nome é ${name}
 
