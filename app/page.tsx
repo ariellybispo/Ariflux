@@ -123,12 +123,12 @@ const portfolioProjects = [
     status: "Online",
   },
   {
-    title: "Em Breve — Novo Projeto",
-    category: "Em breve",
-    description: "Em breve um novo projeto desenvolvido pela Ariflux.",
-    image: "/logo-ariflux.png",
-    link: "#",
-    status: "Em breve",
+    title: "Clínica Viva Mais",
+    category: "Landing page · Saúde",
+    description: "Landing page da clínica, com informações sobre os serviços oferecidos.",
+    image: "/clinica-print.png",
+    link: "https://exemploclinicaodontologica.com",
+    status: "Online",
   },
   {
     title: "Em Breve — Novo Projeto",
