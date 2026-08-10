@@ -128,7 +128,7 @@ const portfolioProjects = [
     description: "Em breve um novo projeto desenvolvido pela Ariflux.",
     image: "/logo-ariflux.png",
     link: "#",
-    status: "Online",
+    status: "Em breve",
   },
   {
     title: "Em Breve — Novo Projeto",
