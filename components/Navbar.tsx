@@ -8,6 +8,7 @@ const links = [
   { href: "#servicos", label: "Serviços", id: "servicos" },
   { href: "#processo", label: "Processo", id: "processo" },
   { href: "#sobre", label: "Sobre", id: "sobre" },
+  { href: "#portfolio", label: "Portfólio", id: "portfolio" },
 ];
 
 export default function Navbar() {
