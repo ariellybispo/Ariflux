@@ -369,7 +369,7 @@ ${project}
               {
                 name: "Arielly Bispo",
                 role: "Co-fundadora",
-                photo: "/team-arielly.jpg",
+                photo: "/image.png",
                 portfolioUrl: "#",
               },
               {
